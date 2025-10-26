@@ -4,10 +4,10 @@ import { ArrowRight, CreditCard, FileText, BarChart3 } from 'lucide-react'
 
 const Feature = ({ icon: Icon, title, desc }) => (
   <motion.div
-    whileHover={{ scale: 1.02 }}
+    whileHover={{ scale: 1.02, rotateX: 0.2, rotateY: -0.2 }}
     transition={{ duration: 0.2 }}
     className="bg-white border border-[#E5E5E5] rounded-md p-6 shadow-sm"
-    style={{ boxShadow: '0 2px 8px rgba(0,0,0,0.04)' }}
+    style={{ boxShadow: '0 2px 8px rgba(0,0,0,0.04)', transformStyle: 'preserve-3d' }}
   >
     <div className="mb-4"><Icon size={24} strokeWidth={2} /></div>
     <h3 className="text-[18px] font-medium mb-2">{title}</h3>
@@ -33,7 +33,7 @@ const Hero = () => {
           transition={{ duration: 0.35, delay: 0.05 }}
           className="mt-5 text-[#4A4A4A] text-[16px] leading-8 max-w-2xl mx-auto"
         >
-          Solvio unifies loan takeover, targeted consultation, and micro-SIP auto-repay into a clean, high-contrast platform.
+          Loan Takeover, Targeted Consultation, and Micro-SIP Auto-Repay in one elegant, high-contrast platform.
         </motion.p>
         <div className="mt-8 flex items-center justify-center gap-4">
           <a href="#solutions" className="inline-flex items-center gap-2 bg-black text-white px-6 md:px-8 py-3 md:py-3.5 text-sm tracking-tight hover:scale-[1.02] transition-transform" style={{borderRadius:0}}>
@@ -45,10 +45,10 @@ const Hero = () => {
         </div>
       </div>
 
-      <div id="solutions" className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
         <Feature icon={CreditCard} title="Loan Takeover" desc="Refinance high-interest debt with a minimalist 6-step flow and transparent, competitive rates." />
-        <Feature icon={FileText} title="1-on-1 Consultation" desc="Single-column assessments, elegant reports, and expert guidance with a clean calendar." />
-        <Feature icon={BarChart3} title="Micro-SIP Auto-Repay" desc="Automated contributions from income with stark line charts and measurable progress." />
+        <Feature icon={FileText} title="1-on-1 Consultation" desc="Single-column assessments, serif-headed reports, and expert guidance with a clean calendar." />
+        <Feature icon={BarChart3} title="Micro-SIP Auto-Repay" desc="Automated contributions with monochrome charts and measurable progress." />
       </div>
     </section>
   )
